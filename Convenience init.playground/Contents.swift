@@ -46,3 +46,35 @@ let swift5 = Course1(name: "Swift 5")
 
 
 
+// Two phase init
+
+class Distance {
+    
+    var kilometre : Double
+    init(kilometre : Double) {
+        self.kilometre = kilometre
+        print("You've travelled \(kilometre) kilometers")
+    }
+    
+    convenience init(miles : Double) {
+        
+        let kms = miles * 1.61
+        
+        self.init(kilometre: kms)
+        
+    }
+    
+}
+
+let dist = Distance(miles: 5.10)
+let dist2 = Distance(kilometre: 2)
+
+// You can use either kms object or mile object
+
+
+
+
+
+
+
+
